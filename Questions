@@ -1,0 +1,28 @@
+
+
+1. **Backend architecture:** How do you want to handle webhook reception?
+   - a) Set up a separate backend server (Node.js/Express) to receive Seeq webhooks and expose an API for the Expo app
+   - b) Use a serverless solution (AWS Lambda, Vercel, etc.) to receive webhooks
+   - c) You already have a backend service ready
+   a setup a NodeJs server express 
+
+2. **Real-time updates:** How should the app receive new alerts?
+   - a) Polling the backend API at regular intervals (simpler)
+   - b) WebSocket connection for real-time push notifications
+   - c) Push notifications (Firebase/Expo Push Notifications)
+    c Expo Push 
+3. **Data persistence:** Where should alerts be stored?
+   - a) In-memory on backend only (alerts lost on restart)
+   - b) Database (SQLite, PostgreSQL, MongoDB, etc.)
+   - c) Both local storage on device and backend database
+    a backend only 
+4. **Authentication:** Does the app need user authentication?
+   - a) No authentication needed (single-user app)
+   - b) Simple authentication to access the app
+   - c) Seeq user authentication integration
+ b simple auth 
+5. **Target platform:**
+   - a) iOS and Android (mobile-first)
+   - b) Include web support
+   - c) Mobile only (iOS or Android specific)
+  a mobile first 
